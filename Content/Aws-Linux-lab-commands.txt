@@ -1,0 +1,2 @@
+chmod +x Dynatrace-OneAgent-Linux-1.309.66.20250401-150134.sh
+sudo ./Dynatrace-OneAgent-Linux-1.309.66.20250401-150134.sh
