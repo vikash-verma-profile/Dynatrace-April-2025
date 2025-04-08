@@ -27,4 +27,10 @@ sudo apt-get autoclean
 sudo apt-get install git mysql-server
 sudo mysql_secure_installation
 
+vim config.php
+i==> allow us to edit
+press esc
+:wq==> is used to save and exit from a file
+cat config.php
+
 
