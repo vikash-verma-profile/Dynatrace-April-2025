@@ -33,4 +33,6 @@ press esc
 :wq==> is used to save and exit from a file
 cat config.php
 
+https://github.com/qyjohn/simple-lamp/tree/master
+
 
