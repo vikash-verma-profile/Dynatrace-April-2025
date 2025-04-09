@@ -16,11 +16,25 @@ sudo apt install apache2 -y
 sudo systemctl start apache2
 sudo systemctl enable apache2
 sudo systemctl status apache2
+sudo apt-get install apache2 php libapache2-mod-php php-mcrypt php-mysql php-curl php-xml php-memcached
 sudo apt-get install git mysql-server
-sudo mysql_secure_installation
+sudo mysql
+CREATE DATABASE simple_lamp;
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON simple_lamp.* TO 'username'@'localhost';
+quit
+cd /var
+sudo chown -R ubuntu:ubuntu www
+cd /var/www/html
+git clone https://github.com/qyjohn/simple-lamp
 
+cd /var/www/html/simple-lamp
+mysql -u username -p simple_lamp < simple_lamp.sql
+cd /var/www/html/simple-lamp
+sudo chown -R www-data:www-data uploads
 
 ==Remove existing mysql and re-install
+sudo mysql_secure_installation
 sudo apt-get remove --purge mysql-server
  sudo apt-get autoremove
 sudo apt-get autoclean

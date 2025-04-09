@@ -1,0 +1,3 @@
+1.Yesterday lab analysis
+2.DB monitoring
+3.How to use a winodws instance and use it for monitoring
