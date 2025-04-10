@@ -1,0 +1,23 @@
+1.Create an EC2 linux instance with Aws AMI.
+2.Connect it with your key
+
+commands to run
+
+sudo yum update -y
+sudo yum install docker -y
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+
+To host the project
+sudo yum install git -y
+git clone https://github.com/Dynatrace/easyTravel-Docker.git
+cd easyTravel-Docker
+
+
+download docker==>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+install docker==>sudo chmod +x /usr/local/bin/docker-compose
+compose docker files=>docker-compose up -d
+
+
+to check whether conatiner is running or not
+docker ps

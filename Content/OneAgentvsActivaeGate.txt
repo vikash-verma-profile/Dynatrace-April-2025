@@ -1,0 +1,25 @@
+One AGent
+
+Data collection from hosts/Monitored host and applications
+
+Montiors:===>
+
+-CPU
+-Application processes (php,java,dot net etc)
+-Log files
+-COde-level visibility
+
+ActiveGate
+
+Act as a gateway/relay
+
+conenct oneAgent and other services to the cluster
+
+Acts as a proxy
+
+-Trasfer data from oneAgents to SAAS
+
+Monitors
+=> cloud services
+=> Remote tech (Kbernates,VMWare etc.)
+

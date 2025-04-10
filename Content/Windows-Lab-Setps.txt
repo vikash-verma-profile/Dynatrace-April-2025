@@ -1,0 +1,6 @@
+1.Created a windows web server by using winows AMI
+2.Connect it with RDP connection
+3.Install web server(IIS) using server manager by going into manage->add roles.
+4.After installation hit your URL and check IIS home page is coming or not.
+5.Create a new file named index.html write something to it and place under C:\inetpub\wwwroot
+6.Install DynaTrace Oneagent and observe the logs and metrix

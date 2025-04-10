@@ -1,0 +1,18 @@
+1.OneAgent
+
+2.PurePath
+
+|  DB=>APi Layer(Backend)==>FrontEND |
+
+links logs and erros
+RCA's for any problem
+
+3.Grail DB
+
+DQL
+Integrated logs with traces and metrics
+
+
+
+4.Automation Engine
+trigger actions based on alerts,events
