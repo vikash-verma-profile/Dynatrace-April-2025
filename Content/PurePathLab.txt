@@ -3,21 +3,22 @@
 
 commands to run
 
+# Update and install docker
 sudo yum update -y
-sudo yum install docker -y
+sudo yum install -y docker git libxcrypt-compat
+
+# Start docker and allow EC2 user
 sudo service docker start
 sudo usermod -a -G docker ec2-user
+newgrp docker  # Reload group membership
 
-To host the project
-sudo yum install git -y
+# Install docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Clone EasyTravel project
 git clone https://github.com/Dynatrace/easyTravel-Docker.git
 cd easyTravel-Docker
 
-
-download docker==>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-install docker==>sudo chmod +x /usr/local/bin/docker-compose
-compose docker files=>docker-compose up -d
-
-
-to check whether conatiner is running or not
-docker ps
+# Run EasyTravel
+docker-compose up -d
