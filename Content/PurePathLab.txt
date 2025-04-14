@@ -10,7 +10,10 @@ sudo yum install -y docker git libxcrypt-compat
 # Start docker and allow EC2 user
 sudo service docker start
 sudo usermod -a -G docker ec2-user
-newgrp docker  # Reload group membership
+
+# Reload group membership
+newgrp docker  
+
 
 # Install docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -22,3 +25,14 @@ cd easyTravel-Docker
 
 # Run EasyTravel
 docker-compose up -d
+
+Install dynatrace on ec2
+
+If logs are not coming please restart docker containers
+
+ docker-compose down ==> for making your containers to stop
+docker-compose up -d ==> to re-run the conatiners to start
+
+then logs will come
+
+
