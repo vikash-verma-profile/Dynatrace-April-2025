@@ -1,0 +1,23 @@
+Fixed==> Runs a task at a fixed interval
+Time==>It will be one-time exectution at a specific timestamp or datetime
+Cron==> Run jobs bases on a cron experssion.
+
+
+ON-Demand==> it will trigger a task .
+someone will explicitly trrigger it.
+
+
+
+https://ujd01070.apps.dynatrace.com/platform/automation/v1/workflows/{id}/run
+
+
+
+https://join.slack.com/t/dynatraceenvworkspace/shared_invite/zt-33p49zqf6-tQesusAfHJf3327yNPFG6w
+
+8760253156785.8753145192962
+
+df9134d46cb1d0409893d09e586dddf8
+
+xoxb-8760253156785-8746654569237-lAdt4wrzhKC3utSfFSf1UHdU
+
+{{ result('get_iss_coordinates').iss_position.latitude }}

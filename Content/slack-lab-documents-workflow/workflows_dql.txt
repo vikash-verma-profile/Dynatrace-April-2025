@@ -1,0 +1,3 @@
+fetch logs, from:now() - 14d
+| summarize logCount = count(), by:{loglevel}
+| sort logCount desc

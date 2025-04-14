@@ -1,0 +1,24 @@
+Step-1 Look for workflow under dyntrace search
+Step-2 CLick on + icon for creating workflow
+step-3 choose on-demand triggers
+step-4 create another step and choose DQL Query option and write below query
+fetch logs, from:now()-14d | summarize  logCount=count(), by:{loglevel} | sort logCount desc
+
+step-5-edit workflow and click on + icon in the botton to first step to add a new step.
+step-6- allow your outbound url from dynatrace so that we can call the api
+settings-> prefernec->limit outbound connections-> enter the dns that you want to call api.open-notify.org
+setp-7 to call the api write below code
+http://api.open-notify.org/iss-now.json
+
+import { execution } from '@dynatrace-sdk/automation-utils';
+
+export default async function ({ executionId }) {
+  const  response =await fetch("http://api.open-notify.org/iss-now.json");
+  const result=await response.json();
+  return result;
+}
+
+
+https://api.slack.com/apps/A08N5495NUA/app-home?
+
+https://docs.dynatrace.com/docs/analyze-explore-automate/workflows/actions/slack

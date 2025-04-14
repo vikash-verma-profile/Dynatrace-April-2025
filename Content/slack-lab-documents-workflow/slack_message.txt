@@ -1,0 +1,9 @@
+Hello!
+
+*Current ISS latitude*: {{ result('get_iss_coordinates').iss_position.latitude}}
+
+**Types of Logs encountered recently:**
+{% for log in result("log_level_stats").records %}
+    {{ log.loglevel }} - *{{ log.logCount }}*
+    {% endfor %}
+  
