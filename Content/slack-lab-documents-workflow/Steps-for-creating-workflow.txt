@@ -22,3 +22,6 @@ export default async function ({ executionId }) {
 https://api.slack.com/apps/A08N5495NUA/app-home?
 
 https://docs.dynatrace.com/docs/analyze-explore-automate/workflows/actions/slack
+
+
+http://api.open-notify.org/iss-now.json
